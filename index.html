@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirect Tracker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
 <div class="card">
-  <h1>Redirect Tracker</h1>
+    <div class="card-header">
+        <h1>Redirect Tracker</h1>
+        <button id="screenshotBtn" class="screenshot-btn">📸</button>
+    </div>
 
-  <div class="input-group">
-    <input type="text" id="urlInput" placeholder="https://example.com или bit.ly/xxx" value="https://wcm.weborama-tech.ru/fcgi-bin/dispatch.fcgi?a.A=cl&erid=[ERID]&a.ycp=MACROSTEST&er=1&a.si=10047&a.te=2699&a.ra=[RANDOM]&g.lu=">
-    <button id="checkBtn">Проверить</button>
-  </div>
+    <div class="settings">
+        <div class="ua-bar">
+            <span class="ua-label">Подсветка значений:</span>
+            <button id="highlightYcpBtn" class="action-btn">a.ycp</button>
+            <button id="highlightEridBtn" class="action-btn">erid</button>
+        </div>
 
-  <div id="resultArea" class="result" style="display: none;"></div>
+        <div class="ua-bar">
+            <span class="ua-label">Эмуляция устройства:</span>
+            <button data-ua="desktop" class="ua-btn">Desktop</button>
+            <button data-ua="mobile" class="ua-btn">iPhone</button>
+            <button data-ua="android" class="ua-btn">Android</button>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="urlInput" class="url-input" placeholder="https://example.com" value="https://wcm.weborama-tech.ru/fcgi-bin/dispatch.fcgi?a.A=cl&erid=[ERID]&a.ycp=MACROSTEST&er=1&a.si=10047&a.te=2699&a.ra=[RANDOM]&g.lu=">
+        <button id="checkBtn">Проверить</button>
+    </div>
+
+    <div id="resultArea" class="result"></div>
 </div>
 <script src="script.js"></script>
 </body>

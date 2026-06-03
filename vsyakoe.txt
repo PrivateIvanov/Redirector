@@ -1,0 +1,3 @@
+  const FUNCTION_URL = 'https://functions.yandexcloud.net/d4e8tpcuk4s6db55jcpu?url=';
+
+https://wcm.weborama-tech.ru/fcgi-bin/dispatch.fcgi?a.A=cl&erid=[ERID]&a.ycp=MACROSTEST&er=1&a.si=10047&a.te=2699&a.ra=[RANDOM]&g.lu=
